@@ -21,6 +21,7 @@ function osszeHasonlit(a,b){
 
 let t = [4, 78, 71, -99];
 //t.sort(osszeHasonlit);
+/*
 t.sort((a,b)=>{
     if(a < b){
         return -1;
@@ -29,14 +30,23 @@ t.sort((a,b)=>{
     }else{
         return 0;
     }
-});
+});*/
 console.log(t);
 
 t.sort((a,b)=>{return a - b});
-
-t = t.filter((e)=>{return e > 0;});
-
 console.log(t);
+
+//t = t.filter((e)=>{return e > 0;});
+t = t.filter(e => e > 0);
+t = t.filter(e => Math.abs(e) > 0);
+console.log(t);
+
+t = t.map(e => e*e);//e.toFixed(2);
+console.log(t);
+
+t.forEach((e,index)=>{
+    console.log(index,e);
+});
 
 
 
