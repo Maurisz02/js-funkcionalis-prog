@@ -25,8 +25,16 @@ function labakbolSzazlabuk(labakTomb){
 
     szazLabu.forEach((e)=>{
         e.kiir();
+    });
+
+    /* Map es megoldas
+    labakTomb.map(e => {
+        let sz = new Szazlabu(e);
+        szazLabu.push(sz);
     })
 
+    szazLabu.map(e => e.kiir());
+*/
 };
 
 function szazlabuMegjelenites(id,szLista){
