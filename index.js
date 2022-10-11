@@ -50,6 +50,18 @@ t.forEach((e,index)=>{
 
 
 
+//Mellékhatás - side effect
+//console.log('hello');
+//szam++;
+//let a szam++; console.log(szam);
+
+
+//NIncs mellékhatás
+//1+1;
+//Math.sqrt(1*2/4);
+//[1,2,3].filter(e=> e > 2);
+//78 > 2;
+
 
 
 
