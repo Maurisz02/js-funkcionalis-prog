@@ -1,5 +1,6 @@
 
 let tomb = [];
+let szazLabu = []
 
 class Szazlabu{
     #labakSzama;
@@ -10,13 +11,13 @@ class Szazlabu{
 
     kiir(){
         console.log(this.#labakSzama+" lábú százlábú");
+        return this.#labakSzama+" lábú százlábú";
     }
 
 };
 
 function labakbolSzazlabuk(labakTomb){
 
-    let szazLabu = []
     labakTomb.forEach((e,index)=>{
         let sz = new Szazlabu(e);
         szazLabu.push(sz);
@@ -26,6 +27,15 @@ function labakbolSzazlabuk(labakTomb){
         e.kiir();
     })
 
+};
+
+function szazlabuMegjelenites(id,szLista){
+    let ul = document.getElementById(id);
+    szLista.forEach((e)=>{
+        let li = document.createElement('li');
+        li.innerHTML = e.kiir();
+        ul.appendChild(li);
+    });
 };
 
 document.addEventListener("DOMContentLoaded",()=>{
@@ -58,5 +68,7 @@ document.addEventListener("DOMContentLoaded",()=>{
      });
 
      labakbolSzazlabuk(tomb);
+
+     szazlabuMegjelenites('sorolas',szazLabu);
 
 });
