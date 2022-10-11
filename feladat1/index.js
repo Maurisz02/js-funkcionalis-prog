@@ -1,6 +1,9 @@
 
 let tomb = [];
 
+//kivulre a function ha több eseményre tudjuk használni
+//()=>{} hogyha csak egyszer hogy sporoljunk 
+
 document.addEventListener('DOMContentLoaded',()=>{
     for(let i = 0; i < 20; i++){
        let rnd = Math.floor(Math.random() * 29)+1;
